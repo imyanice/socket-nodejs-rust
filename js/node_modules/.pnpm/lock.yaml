@@ -1,0 +1,30 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  zeromq:
+    specifier: '5'
+    version: 5.3.1
+
+packages:
+
+  /nan@2.17.0:
+    resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
+    dev: false
+
+  /node-gyp-build@4.8.0:
+    resolution: {integrity: sha512-u6fs2AEUljNho3EYTJNBfImO5QTo/J/1Etd+NVdCj7qWKUSN/bSLkZwhDv7I+w/MSC6qJ4cknepkAYykDdK8og==}
+    hasBin: true
+    dev: false
+
+  /zeromq@5.3.1:
+    resolution: {integrity: sha512-4WDF9bNWWXe8OAI319bVw5dmG4BklEk8wzFGwRQxEzKb+0mgDU5J/jtyZPo0BEusVIU1+3mRQIEdT5LtQn+aAw==}
+    engines: {node: '>=6.0'}
+    requiresBuild: true
+    dependencies:
+      nan: 2.17.0
+      node-gyp-build: 4.8.0
+    dev: false
