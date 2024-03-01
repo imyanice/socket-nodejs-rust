@@ -1,16 +1,17 @@
 import zmq from "zeromq";
-// Creation of the publisher socket
-let sock = zmq.socket("push");
-// Binding the socket to the port 3000 on localhost
-sock.bindSync("tcp://127.0.0.1:3000");
-console.log("Publisher has established connection to 'tcp://127.0.0.1:3000'.");
 
-sock.send("connected");
+async function run() {
+  const sock = new zmq.Request();
 
-// sock.send("Hello, World!");
+  sock.connect("tcp://127.0.0.1:3000");
+  console.log("Producer bound to port 3000");
+  // Send data to the Rust server
 
-sock.send("exit");
+  await sock.send("AHHHHH");
 
-sock.on("message", (msg) => {
-  console.log("Message received: " + msg.toString());
-});
+  const [result] = await sock.receive();
+
+  console.log(result.toString());
+}
+
+run();

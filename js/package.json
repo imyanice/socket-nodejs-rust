@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "zeromq": "5"
+    "zeromq": "6.0.0-beta.19"
   },
   "type": "module"
 }
