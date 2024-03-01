@@ -1,5 +1,6 @@
 {
-	"dependencies": {
-		"zeromq": "5"
-	}
+  "dependencies": {
+    "zeromq": "5"
+  },
+  "type": "module"
 }
